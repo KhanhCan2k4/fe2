@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,16 +14,37 @@
             position: fixed;
             left: 0;
             top: 0;
-            animation-name: moveAroundBorder ;
+            animation-name: moveAroundBorder;
             animation-duration: 5s;
         }
 
         @keyframes moveAroundBorder {
-            0% { left: 0; top: 0;}
-            25% { left: 100%; top: 0; transform: translateX(-100%); }
-            50% { left: 100%; top: 100%; transform: translate(-100%, -100%); }
-            75% { left: 0; top: 100%; transform: translateY(-100%);}
-            100% { left: 0; top: 0;
+            0% {
+                left: 0;
+                top: 0;
+            }
+
+            25% {
+                left: 100%;
+                top: 0;
+                transform: translateX(-100%);
+            }
+
+            50% {
+                left: 100%;
+                top: 100%;
+                transform: translate(-100%, -100%);
+            }
+
+            75% {
+                left: 0;
+                top: 100%;
+                transform: translateY(-100%);
+            }
+
+            100% {
+                left: 0;
+                top: 0;
             }
         }
 
@@ -31,11 +53,12 @@
             height: 300px;
             margin-top: 50px;
             border-radius: 50%;
-            position: relative;
+            position: fixed;
             left: 30%;
             top: 10%;
             animation-name: rotateAround;
             animation-duration: 5s;
+            animation-iteration-count: infinite;
         }
 
         .circle2::after {
@@ -43,21 +66,59 @@
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            background: #000;
+            background: rgb(222, 78, 78);
             position: absolute;
             left: 0;
             top: 0;
         }
 
         @keyframes rotateAround {
-            0% {rotate: 0deg;}
-            100% {rotate: 360deg}
+            0% {
+                rotate: 0deg;
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(2);
+            }
+
+            100% {
+                rotate: 360deg;
+                transform: scale(1);
+
+            }
+        }
+
+        .delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.6s;
+        }
+
+        .delay-4 {
+            animation-delay: 0.8s;
+        }
+
+        .sub::after {
+            background: rgba(222, 78, 78, 0.6);
         }
 
     </style>
 </head>
+
 <body>
     <div class="circle"></div>
     <div class="circle2"></div>
+    <div class="circle2 sub delay-1"></div>
+    <div class="circle2 sub delay-2"></div>
+    <div class="circle2 sub delay-3"></div>
+    <div class="circle2 sub delay-4"></div>
 </body>
+
 </html>

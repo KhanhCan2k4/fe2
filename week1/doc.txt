@@ -9,9 +9,34 @@
     animation: call a transition
         animation-name: <name>
         animation-duration: <time>
-        
+
     keyframes: defind a transition
         @keyframes <name> {
             0% { css }
             100% { css }
         }
+
+- transform-origin: x y z;
+- transform: scale(1) 
+
+- animation-delay (-2s --> ignore 2s in animation-duration)
+- animation-iteration-count
+- animation-direction 
+    normal
+    reverse
+    alternate --> iteration-count >=2 
+    alternate-reverse --> iteration-count >=2 
+- animation-timing-function
+    ease : normal -> fast -> normal (default)
+    linear: fast
+    ease-in: slow -> fast
+    ease-out: fast -> normal
+    ease-in-out: slow -> fast -> slow
+    cubic-bezier
+- animation-fill-mode
+    none
+    forwards: 100%
+    backwards: 0%
+    both
+
+- animation: name duration timing-function delay iteration-count direction fill-mode 
