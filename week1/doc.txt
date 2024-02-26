@@ -1,0 +1,17 @@
+    ANIMATION 
+- Time
+- intial state, end state
+- big animation <- many small animation
+
+*CSS
+- starting -> ending: 2 states --> transition
+- multi-states --> animation + keyframes
+    animation: call a transition
+        animation-name: <name>
+        animation-duration: <time>
+        
+    keyframes: defind a transition
+        @keyframes <name> {
+            0% { css }
+            100% { css }
+        }
