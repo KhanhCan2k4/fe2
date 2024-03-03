@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Exe</title>
+
+    <style>
+        :root {
+            --swing-deg: 20deg;
+            --swing-height: 50px;
+            --duration: 2s;
+        }
+
+        .swing {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            width: 500px;
+            border-radius: var(--swing-height);
+            height: var(--swing-height);
+            background-image: url("https://th.bing.com/th/id/OIP.Y80Cq2K4_aCGwEb9UK09kAHaEK?rs=1&pid=ImgDetMain");
+            background-size: contain;
+            transform-origin: 50% 50% 0;
+            animation: swing var(--duration) infinite alternate backwards linear;
+        }
+
+        .ball {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: var(--swing-height);
+            width: var(--swing-height);
+            border-radius: 50%;
+            background-image: url("https://th.bing.com/th/id/OIP.GB5Qb90NUlXfLFVFzrrHCAHaHa?rs=1&pid=ImgDetMain");
+            background-size: contain;
+            text-align: center;
+            line-height: var(--swing-height);
+            animation: rollAndRotate var(--duration) infinite alternate linear;
+        }
+
+        @keyframes swing {
+            0% {
+                transform:translateX(-50%) rotate(calc(-1 *var(--swing-deg)));
+            }
+
+            100% {
+                transform:translateX(-50%) rotate(var(--swing-deg));
+            }
+        }
+
+        @keyframes rollAndRotate {
+            0% {
+                left: 0;
+                transform: rotate(0deg);
+            }
+
+            100% {
+                left: calc(100% - var(--swing-height));
+                transform: rotate(360deg);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="swing">
+        <div class="ball"></div>
+    </div>
+</body>
+
+</html>
