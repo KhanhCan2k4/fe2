@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+}
+
+input {
+    outline: none;
+}
+
+
+.route {
+    padding: 10px 20px 100px;
+    position: relative;
+}
+
+.station {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    background: #000;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.route:hover .station {
+    background: #d41010;
+}
+
+.route:hover .station::before {
+    border: 5px solid  #d41010;
+}
+
+.station:hover ~ .station {
+    background: #000;
+}
+
+.station:hover ~ .station::before {
+    border: 5px solid  #000;
+}
+
+.station:hover::before {
+    border: 5px solid  #d41010;
+}
+
+.station::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 0;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 30px;
+    border: 5px solid #000;
+    background: #fff;
+    z-index: 1;
+}
+
+.station .name {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    transform: translateY(100%) rotate(45deg);
+}
+
+.station.end {
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: 0;
+    top: 25px;
+}
+
+.station.end .name {
+    bottom: -50px;
+    text-wrap: nowrap;
+}
+
+.station > input[type="radio"] {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 0;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0);
+    z-index: 2;
+}
+
+.station > input[type="radio"]:before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: -5px;
+    top: -5px;
+    border-radius: 30px;
+    background: #d41010;
+    z-index: 2;
+    display: none;
+}
+
+
+.route:has(input[type="radio"]:checked) input[type="radio"]:not(:checked)::before {
+    display: unset;
+}
+
+.route:has(input[type="radio"]:checked) .station {
+    background: #d41010;
+}
+
+.station input[type="radio"]:checked:before {
+    display: unset;
+}
+
+.station:has(~ .station:has(input[type="radio"]:checked)) input[type="radio"]::before {
+    display: none;
+} 
+
+.station:has(input[type="radio"]:checked),
+.station:has(input[type="radio"]:checked) ~ .station {
+    background: #000;
+}
