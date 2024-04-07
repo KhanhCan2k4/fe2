@@ -1,0 +1,37 @@
+<mxfile host="Electron" modified="2024-04-05T09:52:28.405Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.2.8 Chrome/112.0.5615.165 Electron/24.2.0 Safari/537.36" etag="edY4APOWyp-JI_jGSy7k" version="21.2.8" type="device">
+  <diagram name="Page-1" id="jUok-rRQkS7aPGuEyoLF">
+    <mxGraphModel dx="2977" dy="2110" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="vtQjtwxh5rkwa-EEfpem-5" value="trang-chu" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-220" y="-330" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="vtQjtwxh5rkwa-EEfpem-6" value="thong-tin-tot-nghiep" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="-80" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="vtQjtwxh5rkwa-EEfpem-7" value="thoi-thieu" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="-550" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="vtQjtwxh5rkwa-EEfpem-8" value="tuyen-sinh" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="-300" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="vtQjtwxh5rkwa-EEfpem-9" value="tim-kiem" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="-810" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="vtQjtwxh5rkwa-EEfpem-10" value="bai-viet" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="-640" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="vtQjtwxh5rkwa-EEfpem-11" value="danh-muc" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="-380" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="vtQjtwxh5rkwa-EEfpem-12" value="dien-dan" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="-110" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="vtQjtwxh5rkwa-EEfpem-13" value="vinh-danh" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-220" y="-600" width="200" height="200" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

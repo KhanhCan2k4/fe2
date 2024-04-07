@@ -1,0 +1,171 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background: #ccc;
+}
+
+.btn {
+    display: block;
+}
+
+.btn-buy {
+    margin: 40px auto;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #fff;
+    text-align: center;
+    line-height: 100px;
+}
+
+.btn-buy::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    background-color: #fff;
+    z-index: -1;
+}
+
+.btn-buy::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    background-color: #fff;
+    z-index: -1;
+}
+
+.btn-buy:hover::before {
+    animation: scale1 1s linear infinite;
+}
+
+.btn-buy:hover::after {
+    animation: scale1  1s 0.5s linear infinite;
+}
+
+.btn-buy:active {
+    color: red;
+    font-weight: bold;
+    animation: goDown 2s linear infinite;    
+}
+
+.btn-add-to-cart {
+    padding: 10px 20px;
+    margin: 10px;
+    width: fit-content;
+    border-radius: 20px;
+    background-color: orangered;
+    border: none;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.btn-add-to-cart::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform-origin: 0 0 0; 
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border: 10px solid #fff;
+    opacity: 0.7;
+    /* background-color: #fff; */
+    border-radius: 100%;
+    z-index: 2;
+    display: none;
+}
+
+.btn-add-to-cart::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform-origin: 0 0 0;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    /* background-color: #fff; */
+    border: 5px solid #fff;
+    opacity: 0.0;
+    border-radius: 100%;
+    z-index: 2;
+    display: none;
+}
+
+.btn-add-to-cart:hover::before {
+    animation: scale3 1s infinite;
+    display: unset;
+}
+
+.btn-add-to-cart:hover::after {
+    animation: scale3 1s 0.5s infinite;
+    display: unset;
+}
+
+@keyframes scale1 {
+    0%{
+        scale: 1;
+        opacity: 1;
+    }
+    
+    100% {
+        scale: 1.5;
+        opacity: 0;
+    }
+}
+
+@keyframes scale2 {
+    0%{
+        scale: 1;
+        opacity: 1;
+    }
+    
+    100% {
+        scale: 2;
+        opacity: 0;
+    }
+}
+
+@keyframes scale3 {
+    0%{
+        scale: 0;
+        opacity: 0.7;
+    }
+    100% {
+        scale: 1.5;
+        opacity: 0.5;
+    }
+}
+
+@keyframes scale4 {
+    0%{
+        scale: 0;
+        opacity: 0.7;
+    }
+    100% {
+        scale: 2;
+        opacity: 0.5;
+    }
+}
+
+@keyframes goDown {
+    0% {
+        margin: 40px auto;
+    }
+    100% {
+        margin: 100px auto -20px;
+    }
+}

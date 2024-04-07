@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --app-width: 300px;
+            --app-height: 400px;
+            --app-active-height: 50px;
+            --app-rate: calc(var(--app-active-height) * 2 / var(--app-height));
+        }
+
+        .wrapper {
+            perspective: 500px;
+            border: 1px dashed teal;
+            width: var(--app-width);
+            height: var(--app-height);
+            position: fixed;
+            top: calc(50% - var(--app-height) / 2);
+            left: calc(50% - var(--app-width) / 2);
+        }
+
+        .box {
+            width: 100%;
+            height: 100%;
+            background-color: brown;
+            position: relative;
+            transition: 3s;
+        }
+
+        .box .top,
+        .box .bottom,
+        .box .right,
+        .box .left {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        .box .right {
+            left: unset;
+            right: 0;
+        }
+
+        .box .top {
+            width: 100%;
+            height: 50px;
+        }
+
+        .box .bottom {
+            width: 100%;
+            height: 50px;
+            top: unset;
+            bottom: 0;
+        }
+
+        .box:has(.left:hover) {
+            transform: rotateY(-30deg);
+        }
+
+        .box:has(.right:hover) {
+            transform: rotateY(30deg);
+        }
+
+        .box:has(.top:hover) {
+            transform: rotateX(30deg);
+        }
+
+        .box:has(.bottom:hover) {
+            transform: rotateX(-30deg);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box">
+            <div class="top"></div>
+            <div class="right"></div>
+            <div class="bottom"></div>
+            <div class="left"></div>
+        </div>
+    </div>
+</body>
+
+</html>
