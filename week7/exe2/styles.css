@@ -1,0 +1,53 @@
+body {
+    perspective: 500px;
+}
+
+.button {
+    display: flex;
+    width: 100px;
+    height: 50px;
+    position: relative;
+    margin-top: 300px;
+    margin-left: 100px;
+}
+
+.box {
+    position: absolute;
+    transition: 1s;
+    inset: 0;
+    z-index: 1;
+    transform-style: preserve-3d;
+}
+
+.face {
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    border-radius: 10px;
+    transition: 1s;
+    transform-origin: 0% 50% 0;
+}
+
+.face.front {
+    background-color: black;
+}
+
+.face.top {
+    background-color: #fff;
+    border: 1px solid black;
+    color: black;
+transform: rotateX(90deg) translateZ(25px) translateY(-25px);
+}
+
+.hover {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+}
+
+.hover:hover ~ .box {
+    transform: rotateX(-90deg);
+}

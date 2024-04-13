@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="content">
+        <div class="wrapper">
+            <div class="tab">
+                <input type="radio" checked name="tab">
+    
+                <div class="tab-name">
+                    Tab 1
+                </div>
+    
+                <div class="text">
+                    <p>
+                        <h1>
+                            Content 1
+                        </h1>
+                        Yes, box-shadow is used to add box-shadows to the elements. But you can specify inset shadow, that would look like a inner border rather like a shadow. You just need to set horizontal and vertical shadows to 0px, and the "spread" property of the box-shadow to the width of the border you want to have. So for the 'inner' border of 10px you would write the following.
+                    </p>
+                </div>
+            </div>
+    
+            <div class="tab">
+                <input type="radio" name="tab">
+    
+                <div class="tab-name">
+                    Tab 2
+                </div>
+    
+                <div class="text">
+                    <p>
+                        <h1>
+                            Content 2
+                        </h1>
+                        Here is another approach, but this way the border would be outside of the box. Here is an example. As follows from the example, you can use css outline property, to set the border that does not affect the width and height of the element. This way, the border width is not added to the width of an element.
+                    </p>
+                </div>
+            </div>
+    
+            <div class="tab">
+                <input type="radio" name="tab">
+    
+                <div class="tab-name">
+                    Tab 3
+                </div>
+    
+                <div class="text">
+                    <p>
+                        <h1>
+                            Content 3
+                        </h1>
+                        Although this question has already been adequately answered with solutions using the box-shadow and outline properties, I would like to slightly expand on this for all those who have landed here (like myself) searching for a solution for an inner border with an offset
+                    </p>
+                </div>
+            </div>
+    
+            <div class="tab">
+                <input type="radio" name="tab">
+    
+                <div class="tab-name">
+                    Tab 4
+                </div>
+    
+                <div class="text">
+                    <p>
+                        <h1>
+                            Content 4
+                        </h1>
+                        So let's say you have a black 100px x 100px div and you need to inset it with a white border - which has an inner offset of 5px (say) - this can still be done with the above properties.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

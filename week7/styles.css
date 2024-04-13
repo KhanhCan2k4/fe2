@@ -1,0 +1,254 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-image: url("./3DTPThuDuc/3DTPThuDuc/public/images/background.jpeg");
+    perspective: 500px;
+    overflow: hidden;
+}
+
+.box {
+    width: 400px;
+    height: 300px;
+    position: fixed;
+    top: calc(50% - 150px);
+    left: calc(50% - 200px);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 1s;
+}
+
+.box.layer {
+    width: 500px;
+    height: 350px;
+    top: calc(50% - 175px);
+    left: calc(50% - 250px);
+    background-color: #fff;
+    opacity: 0.6;
+    border-radius: 10px;
+}
+
+.box.layer-1 {
+    transform: translateZ(50px);
+    background-image: url("./3DTPThuDuc/3DTPThuDuc/public/images/logo_back.svg");
+}
+
+.box.layer-2 {
+    width: 300px;
+    height: 250px;
+    position: fixed;
+    top: calc(50% - 125px);
+    left: calc(50% - 150px);
+    transform: translateZ(100px);
+    background-image: url("./3DTPThuDuc/3DTPThuDuc/public/images/logo_front.svg");
+}
+
+.box.layer-3 {
+    width: 200px;
+    height: 150px;
+    position: fixed;
+    top: calc(50% - 75px);
+    left: calc(50% - 100px);
+    transform: translateZ(150px);
+    background-image: url("./3DTPThuDuc/3DTPThuDuc/public/images/logo_text.svg");
+}
+
+.right-top,
+.right-bottom,
+.left-top,
+.left-bottom,
+.top-left,
+.top-right,
+.bottom-left,
+.bottom-right
+{
+    position: fixed;
+    width: 500px;
+    height: 350px;
+    top: calc(50% - 175px);
+    left: calc(50% - 250px);
+    z-index: 1;
+}
+
+.top-left {
+    clip-path: polygon(0 0, 50% 0, 50% 50%);
+}
+
+.top-left:hover ~ .box.layer {
+    transform: rotateX(-30deg) rotateY(-30deg);
+}
+
+.top-left:hover ~ .box.layer-1 {
+    transform: rotateX(-30deg) rotateY(-30deg) translateZ(50px);
+}
+
+.top-left:hover ~ .box.layer-2 {
+    transform: rotateX(-30deg) rotateY(-30deg) translateZ(100px);
+}
+
+.top-left:hover ~ .box.layer-3 {
+    transform: rotateX(-30deg) rotateY(-30deg) translateZ(150px);
+}
+
+.top-right {
+    clip-path: polygon(100% 0, 50% 0, 50% 50%);
+}
+
+.top-right:hover ~ .box.layer {
+    transform: rotateX(-30deg) rotateY(30deg);
+}
+
+.top-right:hover ~ .box.layer-1 {
+    transform: rotateX(-30deg) rotateY(30deg) translateZ(50px);
+}
+
+.top-right:hover ~ .box.layer-2 {
+    transform: rotateX(-30deg) rotateY(30deg) translateZ(100px);
+}
+
+.top-right:hover ~ .box.layer-3 {
+    transform: rotateX(-30deg) rotateY(30deg) translateZ(150px);
+}
+
+.bottom-right {
+    clip-path: polygon(50% 100%, 100% 100% , 50% 50%);
+}
+
+.bottom-right:hover ~ .box.layer {
+    transform: rotateX(30deg) rotateY(30deg);
+}
+
+.bottom-right:hover ~ .box.layer-1 {
+    transform: rotateX(30deg) rotateY(30deg) translateZ(50px);
+}
+
+.bottom-right:hover ~ .box.layer-2 {
+    transform: rotateX(30deg) rotateY(30deg) translateZ(100px);
+}
+
+.bottom-right:hover ~ .box.layer-3 {
+    transform: rotateX(30deg) rotateY(30deg) translateZ(150px);
+}
+
+.bottom-left {
+    clip-path: polygon(0 100%, 50% 100% , 50% 50%);
+}
+
+.bottom-left:hover ~ .box.layer {
+    transform: rotateX(30deg) rotateY(-30deg);
+}
+
+.bottom-left:hover ~ .box.layer-1 {
+    transform: rotateX(30deg) rotateY(-30deg) translateZ(50px);
+}
+
+.bottom-left:hover ~ .box.layer-2 {
+    transform: rotateX(30deg) rotateY(-30deg) translateZ(100px);
+}
+
+.bottom-left:hover ~ .box.layer-3 {
+    transform: rotateX(30deg) rotateY(-30deg) translateZ(150px);
+}
+
+.right-top {
+    clip-path: polygon(100% 50% , 100% 0% , 50% 50%);
+}
+
+.right-top:hover ~ .layer {
+    transform: rotateX(-30deg) rotateY(30deg);
+}
+
+.right-top:hover ~ .layer-1 {
+    transform: rotateX(-30deg) rotateY(30deg) translateZ(50px);
+}
+
+.right-top:hover ~ .layer-2 {
+    transform: rotateX(-30deg) rotateY(30deg) translateZ(100px);
+}
+
+.right-top:hover ~ .layer-3 {
+    transform: rotateX(-30deg) rotateY(30deg) translateZ(150px);
+}
+
+.right-bottom {
+    clip-path: polygon(100% 50% , 100% 100% , 50% 50%);
+}
+
+.right-bottom:hover ~ .layer {
+    transform: rotateX(-30deg) rotateY(-30deg);
+}
+
+.right-bottom:hover ~ .layer-1 {
+    transform: rotateX(-30deg) rotateY(-30deg) translateZ(50px);
+}
+
+.right-bottom:hover ~ .layer-2 {
+    transform: rotateX(-30deg) rotateY(-30deg) translateZ(100px);
+}
+
+.right-bottom:hover ~ .layer-3 {
+    transform: rotateX(-30deg) rotateY(-30deg) translateZ(150px);
+}
+
+.left-top {
+    clip-path: polygon(0 0,0 50% , 50% 50%);
+}
+
+.left-top:hover ~ .layer {
+    transform: rotateX(-30deg) rotateY(-30deg);
+}
+
+.left-top:hover ~ .layer-1 {
+    transform: rotateX(-30deg) rotateY(-30deg) translateZ(50px);
+}
+
+.left-top:hover ~ .layer-2 {
+    transform: rotateX(-30deg) rotateY(-30deg) translateZ(100px);
+}
+
+.left-top:hover ~ .layer-3 {
+    transform: rotateX(-30deg) rotateY(-30deg) translateZ(150px);
+}
+
+.left-bottom {
+    clip-path: polygon(0 100%, 0 50% , 50% 50%);
+}
+
+.left-bottom:hover ~ .layer {
+    transform: rotateX(30deg) rotateY(-30deg);
+}
+
+.left-bottom:hover ~ .layer-1 {
+    transform: rotateX(30deg) rotateY(-30deg) translateZ(50px);
+}
+
+.left-bottom:hover ~ .layer-2 {
+    transform: rotateX(30deg) rotateY(-30deg) translateZ(100px);
+}
+
+.left-bottom:hover ~ .layer-3 {
+    transform: rotateX(30deg) rotateY(-30deg) translateZ(150px);
+}
+
+.lights .light {
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #ffc400;
+    mix-blend-mode: overlay;
+    animation: uplight 3s;
+}
+
+@keyframes uplight {
+    0% {
+        top: calc(100% + 200px);
+        opacity: 1;
+    }
+    100% {
+        top: -200px;
+        opacity: 0;
+    }
+}
